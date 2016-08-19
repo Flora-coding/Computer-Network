@@ -1,0 +1,11 @@
+ICMP协议
+用来传递差错、控制、查寻信息
+
+ICMP重定向
+ICMP差错检测（Ping）ICMP Echo Request  ICMP Echo Reply  Ping通了，就是能收也能发
+ICMP错误报告  告诉源地址目的地不可达
+ICMP消息类型和编码类型两位组合决定ICMP报文的内容
+
+
+tracert  
+UDP端口值非常大，一路上都会回复，目的地端口不可达
