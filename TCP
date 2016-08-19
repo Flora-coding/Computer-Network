@@ -1,0 +1,35 @@
+面向连接的传输层协议，提供可靠的传输服务
+强行规定，来回共三次握手，就建立链接。
+TCP目的端口号，指明上层协议
+端口号用来区分不同的网络服务
+
+TCP头部（20-40字节）
+BGP认证的内容使用的是40字节
+ACK位（1 说明回复了，回复的内容在acknowledge number存储）   SYN位（置1 收到请回复 前两次握手）  FIN位
+
+
+开始传送
+1  A  SYN (seq=a
+2  B  SYN ACK(seq=b   ACK=a+1)
+3  A   ACK（seq=a+1  ACK=b+1）
+
+停止传送
+A   FIN ACK（seq=a，ack=b）
+B   ACK（seq=b，ack=a+1）（针对FIN）
+
+B   FIN ACK（seq=b，ack=a+1）
+A   ACK（seq=a+1，ack=b+1）
+
+
+
+udp 8 个字节
+
+
+
+
+
+
+TCP流量控制
+两端的window不一样大，大的自动调小窗口（滑动窗口）
+
+批量确认，ack最后一个即可
